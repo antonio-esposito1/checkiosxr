@@ -93,27 +93,44 @@ elif args.preorpost == 'post':
     if Precheck == Postcheck:
         print('i due file json sono identici')
     else:
-        if Postcheck['showisisnei'] == Postcheck['showisisnei']:
+        if Precheck['showisisnei'] == Postcheck['showisisnei']:
           print('ISIS OK')
         else:
             print('ISIS KO')
-        if Postcheck['showbgpvpv4unicastsummary'] == Postcheck['showbgpvpv4unicastsummary']:
+        if Precheck['showbgpvpv4unicastsummary'] == Postcheck['showbgpvpv4unicastsummary']:
           print('BGP VPNV4 OK')
         else:
             print('BGP VPNV4 KO')
-        if Postcheck['showbgpvpv6unicastsummary'] == Postcheck['showbgpvpv6unicastsummary']:
+        if Precheck['showbgpvpv6unicastsummary'] == Postcheck['showbgpvpv6unicastsummary']:
           print('BGP VPNV6 OK')
         else:
             print('BGP VPNV6 KO')
-        if Postcheck['showbundlebundleethernet'] == Postcheck['showbundlebundleethernet']:
+        
+        if Precheck['showbundlebundleethernet'] == Postcheck['showbundlebundleethernet']:
           print('BUNDLE ETHERNET OK')
         else:
             print('BUNDLE ETHERNET KO')
+        
         if Precheck['showinterfacestatus'] == Postcheck['showinterfacestatus']:
           print('INTERFACE OK')
         else:
           for l in Precheck['showinterfacestatus']['data']['interfaces']['interface']:
             if l not in Postcheck['showinterfacestatus']['data']['interfaces']['interface']:
               print('check questa interfaccia:', l)
+        
+        if Precheck['showplatform'] == Postcheck['showplatform']:
+          print('MODULE OK')
+        else:
+          for l in Precheck['showplatform']['data']['platfomr']['racks']['slots']['slot']:
+            if l not in Postcheck['showplatform']['data']['platfomr']['racks']['slots']['slot']:
+              print('check questo modulo:', l)
+        
+        if Precheck['showlacp'] == Postcheck['showlacp']:
+          print('LACP OK')
+        else:
+          for l in Precheck['showlacp']['data']['lacp']['interfaces']['interface']:
+            if l not in Postcheck['showlacp']['data']['lacp']['interfaces']['interface']:
+              print('check questo lacp:', l)
+
 else:
     print('Devi scegliere pre o post')
