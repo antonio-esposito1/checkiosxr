@@ -1,0 +1,11 @@
+<interfaces xmlns="http://openconfig.net/yang/interfaces">
+        <interface>
+          <name/>
+          <state>
+            <description/>
+            <enabled/>
+            <admin-status/>
+            <oper-status/>
+          </state>
+        </interface>
+      </interfaces>
