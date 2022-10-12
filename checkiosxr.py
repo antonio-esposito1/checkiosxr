@@ -12,7 +12,7 @@ netconfrequest che prende in ingresso due parametri:
  - device a cui applicare la richiesta. Nota che device è un oggetto che viene creato con ncclient
 
 Nota che i filtri xml da applicare alla richiesta sono salvati nella cartella templatexml e vengono letti in sequenza grazie alla libreria os, L'ordine con cui vengono letti questi file 
-è per data per cui il primo ad essere creato e anche il primo della lista e cosi via.
+è alfabetico
 
 
 le seguenti informazioni sulle intrfacce e sui protocolli, abbiamo cercato di mantenere una corrispondenza tra le richieste netconf che facciamo al device e i comandi utlizzati 
@@ -29,6 +29,7 @@ import xmltodict
 import json
 import os
 from argparse import ArgumentParser
+import getpass
 
 from ncclient import manager
 
@@ -37,8 +38,6 @@ from myprivatelibrary import netconfrequest
 parser = ArgumentParser(description='Usage:')
 
 # Script argument for pre e post
-
-
 
 parser.add_argument('-t', '--preorpost', type=str, required=True)
 
@@ -58,7 +57,16 @@ args = parser.parse_args()
 """
 
 
+# Attiva questo pezzo di codice quando vai in produzione
+"""
+deviceip = input('deviceip: ')
+switchuser = input('login: ')
+switchpassword = getpass.getpass()
 
+device = manager.connect(host=deviceip, port=830, username=switchuser, password=switchpassword, hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
+"""
+
+# Disattiva questa linea di codice quando vai in produzione
 device = manager.connect(host='v-mivpe015', port=830, username='EspositoA1', password='admin', hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
 
 D = dict()
@@ -76,30 +84,36 @@ if args.preorpost == 'pre':
 elif args.preorpost == 'post':
     json.dump(D, fp = open('postcheck.json', 'w'), indent = 4)
 
-    postcheck = json.load(open('postcheck.json'))
+    Precheck = json.load(open('precheck.json'))
     Postcheck = json.load(open('postcheck.json'))
 
-    print(postcheck.keys())
+    print(Postcheck.keys())
     print(Postcheck.keys())
 
-    if postcheck == Postcheck:
+    if Precheck == Postcheck:
         print('i due file json sono identici')
     else:
-        if postcheck['showisisnei'] == Postcheck['showisisnei']:
+        if Postcheck['showisisnei'] == Postcheck['showisisnei']:
           print('ISIS OK')
         else:
             print('ISIS KO')
-        if postcheck['showbgpvpv4unicastsummary'] == Postcheck['showbgpvpv4unicastsummary']:
+        if Postcheck['showbgpvpv4unicastsummary'] == Postcheck['showbgpvpv4unicastsummary']:
           print('BGP VPNV4 OK')
         else:
             print('BGP VPNV4 KO')
-        if postcheck['showbgpvpv6unicastsummary'] == Postcheck['showbgpvpv6unicastsummary']:
+        if Postcheck['showbgpvpv6unicastsummary'] == Postcheck['showbgpvpv6unicastsummary']:
           print('BGP VPNV6 OK')
         else:
             print('BGP VPNV6 KO')
-        if postcheck['showbundlebundleethernet'] == Postcheck['showbundlebundleethernet']:
+        if Postcheck['showbundlebundleethernet'] == Postcheck['showbundlebundleethernet']:
           print('BUNDLE ETHERNET OK')
         else:
             print('BUNDLE ETHERNET KO')
+        if Precheck['showinterfacestatus'] == Postcheck['showinterfacestatus']:
+          print('INTERFACE OK')
+        else:
+          for l in Precheck['showinterfacestatus']['data']['interfaces']['interface']:
+            if l not in Postcheck['showinterfacestatus']['data']['interfaces']['interface']:
+              print('check questa interfaccia:', l)
 else:
     print('Devi scegliere pre o post')
