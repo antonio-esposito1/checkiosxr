@@ -6,17 +6,11 @@
               <minimum-active-links/>
               <active-member-count/>
               <lacp-status/>
-              <link-order-status/>
             </data>
             <members>
               <member>
                 <member-interface/>
-                <link-data>
-                  <actor-port-state/>
-                </link-data>
-                <port-number/>
                 <lacp-enabled/>
-                <member-type/>
               </member>
             </members>
           </bundle>
