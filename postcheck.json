@@ -1,0 +1,324 @@
+{
+    "showisisnei": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "isis": {
+                "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-clns-isis-oper",
+                "instances": {
+                    "instance": {
+                        "instance-name": "CORE",
+                        "neighbors": {
+                            "neighbor": {
+                                "system-id": "0101.7600.1040",
+                                "interface-name": "Bundle-Ether3000",
+                                "neighbor-system-id": "0101.7600.1040",
+                                "neighbor-snpa": "0004.9b6b.8f37",
+                                "local-interface": "Bundle-Ether3000",
+                                "neighbor-state": "isis-adj-up-state",
+                                "neighbor-circuit-type": "isis-levels-12",
+                                "neighbor-media-type": "isis-media-class-p2p"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "showbgpvpv4unicastsummary": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "bgp": {
+                "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-bgp-oper",
+                "instances": {
+                    "instance": {
+                        "instance-name": "default",
+                        "instance-active": {
+                            "default-vrf": {
+                                "afs": {
+                                    "af": {
+                                        "af-name": "vpnv4-unicast",
+                                        "neighbor-af-table": {
+                                            "neighbor": {
+                                                "neighbor-address": "10.176.2.20",
+                                                "description": "Session iMP-BGP to ASR9K VRRs Peer_Group",
+                                                "remote-as": "30722",
+                                                "connection-state": "bgp-st-estab",
+                                                "af-data": {
+                                                    "af-name": "vpnv4",
+                                                    "prefixes-accepted": "3",
+                                                    "prefixes-advertised": "0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "showbgpvpv6unicastsummary": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "bgp": {
+                "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-bgp-oper",
+                "instances": {
+                    "instance": {
+                        "instance-name": "default",
+                        "instance-active": {
+                            "default-vrf": {
+                                "afs": {
+                                    "af": {
+                                        "af-name": "vpnv6-unicast",
+                                        "neighbor-af-table": {
+                                            "neighbor": {
+                                                "neighbor-address": "10.176.2.20",
+                                                "description": "Session iMP-BGP to ASR9K VRRs Peer_Group",
+                                                "remote-as": "30722",
+                                                "connection-state": "bgp-st-estab",
+                                                "af-data": {
+                                                    "af-name": "vpnv6",
+                                                    "prefixes-accepted": "0",
+                                                    "prefixes-advertised": "0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "showbundlebundleethernet": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "bundles": {
+                "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-bundlemgr-oper",
+                "bundles": {
+                    "bundle": [
+                        {
+                            "bundle-interface": "Bundle-Ether3000",
+                            "data": {
+                                "minimum-active-links": "1",
+                                "active-member-count": "1",
+                                "lacp-status": "bm-feature-operational"
+                            },
+                            "members": {
+                                "member": {
+                                    "member-interface": "GigabitEthernet0/0/0/1",
+                                    "lacp-enabled": "TRUE"
+                                }
+                            }
+                        },
+                        {
+                            "bundle-interface": "Bundle-Ether3013",
+                            "data": {
+                                "minimum-active-links": "1",
+                                "active-member-count": "0",
+                                "lacp-status": "bm-feature-operational"
+                            },
+                            "members": {
+                                "member": {
+                                    "member-interface": "GigabitEthernet0/0/0/0",
+                                    "lacp-enabled": "TRUE"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "showinterfacestatus": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "interfaces": {
+                "@xmlns": "http://openconfig.net/yang/interfaces",
+                "interface": [
+                    {
+                        "name": "Loopback0",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP",
+                            "description": "mgmt-inband"
+                        }
+                    },
+                    {
+                        "name": "Loopback101",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP"
+                        }
+                    },
+                    {
+                        "name": "Bundle-Ether3000",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP",
+                            "description": "bundle to mivpe016"
+                        }
+                    },
+                    {
+                        "name": "Bundle-Ether3013",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "DOWN",
+                            "description": "bundle to mivar102"
+                        }
+                    },
+                    {
+                        "name": "MgmtEth0/RP0/CPU0/0",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP"
+                        }
+                    },
+                    {
+                        "name": "GigabitEthernet0/0/0/0",
+                        "state": {
+                            "enabled": "false",
+                            "admin-status": "DOWN",
+                            "oper-status": "DOWN",
+                            "description": "link to mivar102"
+                        }
+                    },
+                    {
+                        "name": "GigabitEthernet0/0/0/1",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP",
+                            "description": "link to mivpe016"
+                        }
+                    },
+                    {
+                        "name": "Null0",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "showplatform": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "platform": {
+                "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-plat-chas-invmgr-ng-oper",
+                "racks": {
+                    "rack": {
+                        "rack-name": "0",
+                        "slots": {
+                            "slot": [
+                                {
+                                    "slot-name": "0",
+                                    "state": {
+                                        "card-type": "R-IOSXRV9000-LC-C",
+                                        "state": "operational",
+                                        "is-shutdown": "false",
+                                        "admin-state": "Up",
+                                        "node-name": "0/0/CPU0"
+                                    }
+                                },
+                                {
+                                    "slot-name": "16",
+                                    "vm": {
+                                        "node-description": "RP",
+                                        "red-role": "ACTIVE",
+                                        "partner-name": "NONE",
+                                        "software-status": "FINAL Band",
+                                        "node-ip": "192.0.0.4",
+                                        "node-name": "0/RP0/CPU0"
+                                    },
+                                    "state": {
+                                        "card-type": "R-IOSXRV9000-RP-C",
+                                        "state": "operational",
+                                        "is-shutdown": "false",
+                                        "admin-state": "Up",
+                                        "node-name": "0/RP0/CPU0"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "showlacp": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "lacp": {
+                "@xmlns": "http://openconfig.net/yang/lacp",
+                "interfaces": {
+                    "interface": [
+                        {
+                            "name": "Bundle-Ether3000",
+                            "state": {
+                                "lacp-mode": "ACTIVE",
+                                "system-priority": "32768",
+                                "system-id-mac": "00:22:3a:58:be:ff"
+                            },
+                            "members": {
+                                "member": {
+                                    "interface": "GigabitEthernet0/0/0/1",
+                                    "state": {
+                                        "interface": "GigabitEthernet0/0/0/1",
+                                        "system-id": "00:22:3a:58:be:ff",
+                                        "oper-key": "3000",
+                                        "partner-id": "00:04:9b:6b:8f:38",
+                                        "partner-key": "3000",
+                                        "activity": "ACTIVE",
+                                        "synchronization": "IN_SYNC"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Bundle-Ether3013",
+                            "state": {
+                                "lacp-mode": "ACTIVE",
+                                "system-priority": "32768",
+                                "system-id-mac": "00:22:3a:58:be:ff"
+                            },
+                            "members": {
+                                "member": {
+                                    "interface": "GigabitEthernet0/0/0/0",
+                                    "state": {
+                                        "interface": "GigabitEthernet0/0/0/0",
+                                        "system-id": "00:22:3a:58:be:ff",
+                                        "oper-key": "3013",
+                                        "partner-id": "00:90:bf:4b:77:23",
+                                        "partner-key": "3013",
+                                        "activity": "ACTIVE",
+                                        "synchronization": "OUT_SYNC"
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}
