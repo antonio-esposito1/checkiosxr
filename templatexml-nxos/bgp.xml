@@ -1,0 +1,9 @@
+<System xmlns="http://cisco.com/ns/yang/cisco-nx-os-device">
+                <bgp-items>
+                    <inst-items>
+                        <dom-items>
+                            <Dom-list/>
+                        </dom-items>
+                    </inst-items>
+                </bgp-items>
+        </System>

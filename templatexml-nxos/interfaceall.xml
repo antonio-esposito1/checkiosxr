@@ -1,0 +1,10 @@
+<System xmlns="http://cisco.com/ns/yang/cisco-nx-os-device">
+            <intf-items>
+                <phys-items>
+                <PhysIf-list>
+                    <dbgIfIn-items/>
+                    <dbgIfOut-items/>
+                </PhysIf-list>
+                </phys-items>
+            </intf-items>
+        </System>

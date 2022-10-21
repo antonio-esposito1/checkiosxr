@@ -1,0 +1,12 @@
+<System xmlns="http://cisco.com/ns/yang/cisco-nx-os-device">
+        <intf-items>
+          <descr/>
+          <phys-items>
+            <PhysIf-list>
+              <id/>
+              <descr/>
+              <adminSt/>
+            </PhysIf-list>
+          </phys-items>
+        </intf-items>
+      </System>

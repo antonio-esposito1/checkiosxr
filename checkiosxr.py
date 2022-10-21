@@ -30,6 +30,7 @@ import json
 import os
 from argparse import ArgumentParser
 import getpass
+import lxml.etree as et
 
 from ncclient import manager
 
@@ -69,9 +70,43 @@ device = manager.connect(host=deviceip, port=830, username=switchuser, password=
 # Disattiva questa linea di codice quando vai in produzione
 device = manager.connect(host='v-mivpe015', port=830, username='EspositoA1', password='admin', hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
 
+
+
+"""
+La prima cosa che devo fare è cercare di capire con quale tipo di device stiamo lavorando, poichè non ho ancora trovato un modello di yang che mi tirasse fuori questa informazione
+dovrò usare due modelli di yang diversi. Per nx-os userò cisco-nx-os-device copyRight
+"""
+
+"""
+Faccio una get netconf verso il device con il filtro copyRight che mi restituisce diverse info tra cui il tipo di piattaforma su cui si sta lavorando. Ho verificato che se uso eusto 
+filtro per una macchina NX-OS mi ritornano le info richieste mentre se mando la stessa get ad una macchina XR non ho errore ma le info riportate sono vuote.
+Con questi presupposti mi basterà verificare se nella stringa di ritorno esiste la sottostringa NX-OS, in caso affermativo sono in presenza di una macchina NX-OS, in caso contrario sono
+in presenza di qualcos'altro, probabilemte XR. Non ho verificato se questo filtro lavora anche IOS-XE.
+"""
+
+copyRight = '''
+              <System xmlns="http://cisco.com/ns/yang/cisco-nx-os-device">
+                 <showversion-items>
+                    <copyRight/>
+                 </showversion-items>
+              </System>
+            '''
+systemtype = device.get(('subtree', copyRight)).data_xml
+
+if 'NX-OS' in systemtype:
+  path = 'templatexml-nxos'
+else:
+  path = 'templatexml'
+   
+#definisco un dizionario che, alla fine,  conterrà tutte le info relativa alla piattaforma.
+
 D = dict()
 
-path = 'templatexml'
+
+
+
+
+#path = 'templatexml-nxos'
 for filename in os.listdir(path):
     if filename.endswith('.xml'):
             with open(os.path.join(path, filename), 'r') as g:

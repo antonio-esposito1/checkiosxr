@@ -1,0 +1,8 @@
+<System xmlns="http://cisco.com/ns/yang/cisco-nx-os-device">
+        <serial/>
+        <showversion-items>
+          <copyRight/>
+          <nxosVersion/>
+          <nxosImageFile/>
+        </showversion-items>
+      </System>
