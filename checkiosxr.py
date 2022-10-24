@@ -40,7 +40,29 @@ import lxml.etree as et
 
 from ncclient import manager
 
-from myprivatelibrary import netconfrequest
+#from myprivatelibrary import netconfrequest
+
+"""
+Questa funzione prende in ingresso due parametri:
+ - Una stringa contenete il filtro xml da applicare alla richista
+ - device a cui applicare la richiesta. Nota che device è un oggetto che viene creato con ncclient
+
+"""
+
+def netconfrequest(subtree_filter, device):
+
+    #crea una string str_nc_get_reply contenete la risposta xml del device
+    str_nc_get_reply = device.get(('subtree', subtree_filter)).data_xml
+    
+    #Crea un file di testo check.xml contenente la stringa con la risposta xml
+    with open("%s.xml" % 'check', 'w') as f:
+        f.write(str_nc_get_reply)
+        f.close()
+    
+    #Converte xml in un OrdDictionary, una speciale classe di dizionario che non permette agli elementi di cambiare ordine, Questo serve perché nei file xml l'ordine è importante.
+     
+    with open('check.xml') as fxml:
+        return xmltodict.parse(fxml.read())
 
 class Device:
   def __init__(self, name, username, password):
@@ -51,9 +73,13 @@ class Device:
   def connect(self):
     return manager.connect(host=self.name, port=830, username=self.username, password=self.password, hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
 
-devicename = input('devicename: ')
-username = input('login: ')
-userpassword = getpass.getpass()
+devicename = 'v-mivpe015'
+username = 'EspositoA1'
+userpassword = 'admin'
+
+#devicename = input('devicename: ')
+#username = input('login: ')
+#userpassword = getpass.getpass()
 
 dev = Device(devicename, username, userpassword)
 
@@ -128,6 +154,7 @@ else:
 
 D = dict()
 
+#Questo ciclo for è il cuore del programma, mi crea un dizionario D con tutti i dati estratti dal device.
 
 for filename in os.listdir(path):
     if filename.endswith('.xml'):
@@ -135,6 +162,7 @@ for filename in os.listdir(path):
                 D[filename[:-4]] = netconfrequest(g.read(), device)
 
 
+#Stampo il dizionario su file .json
 
 if args.preorpost == 'pre':
     json.dump(D, fp = open('precheck.json', 'w'), indent = 4)
@@ -144,12 +172,55 @@ elif args.preorpost == 'post':
     Precheck = json.load(open('precheck.json'))
     Postcheck = json.load(open('postcheck.json'))
 
+    ListaKeysPrecheck = list(Postcheck.keys())
+    ListaKeysPostcheck = list(Postcheck.keys())
+
+    print(type(ListaKeysPrecheck))
+    print(ListaKeysPrecheck)
+
+    print(type(ListaKeysPostcheck))
+    print(ListaKeysPostcheck)
+
     print(Postcheck.keys())
     print(Postcheck.keys())
+
+    def visitadizionari(dizionario1, dizionario2):
+      ListaDelleChiavi = list(dizionario1.keys())
+      for d in ListaDelleChiavi:
+        if type(dizionario1[d]) is dict:
+          visitadizionari(dizionario1[d],dizionario2[d])
+        elif type(dizionario1[d]) is str:
+          pass
+        else:
+          print('non ci sono')
+          for l in dizionario1[d]:
+            if l not in dizionario2[d]:
+              print('check', l)
+
+
 
     if Precheck == Postcheck:
         print('i due file json sono identici')
     else:
+      for k1 in ListaKeysPrecheck:
+        if Precheck[k1] == Postcheck[k1]:
+          print(k1, 'is ok')
+        else:
+          print(k1, 'is not ok')
+          visitadizionari(Precheck[k1],Postcheck[k1])
+          print('************************************************************************')
+          """
+          ListaKeys2Precheck = list(Postcheck[k1].keys())
+          print(ListaKeys2Precheck)
+          for k2 in ListaKeys2Precheck:
+            if Precheck[k1][k2] is dict:
+
+            if Precheck[k1][k2] == Postcheck[k1][k2]:
+              print(k2, 'is ok')
+            else:
+              print(k2, 'is not ok') 
+          """         
+        """
         if Precheck['showisisnei'] == Postcheck['showisisnei']:
           print('ISIS OK')
         else:
@@ -188,6 +259,6 @@ elif args.preorpost == 'post':
           for l in Precheck['showlacp']['data']['lacp']['interfaces']['interface']:
             if l not in Postcheck['showlacp']['data']['lacp']['interfaces']['interface']:
               print('check questo lacp:', l)
-
+        """
 else:
     print('Devi scegliere pre o post')

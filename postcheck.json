@@ -10,13 +10,13 @@
                         "instance-name": "CORE",
                         "neighbors": {
                             "neighbor": {
-                                "system-id": "0101.7600.1040",
-                                "interface-name": "Bundle-Ether3000",
-                                "neighbor-system-id": "0101.7600.1040",
-                                "neighbor-snpa": "0004.9b6b.8f37",
-                                "local-interface": "Bundle-Ether3000",
+                                "system-id": "0101.7600.0072",
+                                "interface-name": "Bundle-Ether3013",
+                                "neighbor-system-id": "0101.7600.0072",
+                                "neighbor-snpa": "0090.bf4b.7728",
+                                "local-interface": "Bundle-Ether3013",
                                 "neighbor-state": "isis-adj-up-state",
-                                "neighbor-circuit-type": "isis-levels-12",
+                                "neighbor-circuit-type": "isis-levels-2",
                                 "neighbor-media-type": "isis-media-class-p2p"
                             }
                         }
@@ -123,7 +123,7 @@
                             "bundle-interface": "Bundle-Ether3013",
                             "data": {
                                 "minimum-active-links": "1",
-                                "active-member-count": "0",
+                                "active-member-count": "1",
                                 "lacp-status": "bm-feature-operational"
                             },
                             "members": {
@@ -176,7 +176,7 @@
                         "state": {
                             "enabled": "true",
                             "admin-status": "UP",
-                            "oper-status": "DOWN",
+                            "oper-status": "UP",
                             "description": "bundle to mivar102"
                         }
                     },
@@ -191,9 +191,9 @@
                     {
                         "name": "GigabitEthernet0/0/0/0",
                         "state": {
-                            "enabled": "false",
-                            "admin-status": "DOWN",
-                            "oper-status": "DOWN",
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP",
                             "description": "link to mivar102"
                         }
                     },
@@ -212,7 +212,7 @@
                             "enabled": "true",
                             "admin-status": "UP",
                             "oper-status": "UP",
-                            "description": "link to mivce502"
+                            "description": "link to mivce501"
                         }
                     },
                     {
@@ -317,10 +317,10 @@
                                         "interface": "GigabitEthernet0/0/0/0",
                                         "system-id": "00:22:3a:58:be:ff",
                                         "oper-key": "3013",
-                                        "partner-id": "00:00:00:00:00:00",
-                                        "partner-key": "0",
+                                        "partner-id": "00:90:bf:4b:77:23",
+                                        "partner-key": "3013",
                                         "activity": "ACTIVE",
-                                        "synchronization": "OUT_SYNC"
+                                        "synchronization": "IN_SYNC"
                                     }
                                 }
                             }
