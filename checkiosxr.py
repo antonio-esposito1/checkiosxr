@@ -1,27 +1,33 @@
 """
-L'obbiettivo di questo programma è raccogliere le informazioni da un cisco IOSXR per verificare il ripristino dei servizi dopo la procedura di upgrade.
+L'obbiettivo di questo programma è raccogliere le informazioni da un cisco IOSXR e NXOS per verificare il ripristino dei servizi dopo la procedura di upgrade.
 
 il programma richiede di passare un argomento pre o post per:
   - se si sceglier pre allora vengono raccolti i dati e salvati in un file precheck.json.
   - se si sceglie post allora vengono raccolti i dati e salvati in un file postcheck.json e viene poi attivata un procedura per confrontare i due file precheck.jsoon e 
     postcheck.jsono
 
-Le informazioni vengono raccolte dal device usando netconf quindi usiamo ncclient. il codice per fare la richiesta netconf al devide è racchiuso nel module myprivatelibrary nella funzione
+Le informazioni vengono raccolte dal device usando netconf quindi usiamo ncclient. il codice per fare la richiesta netconf al device è racchiuso nel module myprivatelibrary nella funzione
 netconfrequest che prende in ingresso due parametri:
  - Una stringa contenete il filtro xml da applicare alla richista 
  - device a cui applicare la richiesta. Nota che device è un oggetto che viene creato con ncclient
 
-Nota che i filtri xml da applicare alla richiesta sono salvati nella cartella templatexml e vengono letti in sequenza grazie alla libreria os, L'ordine con cui vengono letti questi file 
+Nota che i filtri xml da applicare alla richiesta sono salvati nella cartella templatexml per XR e templatexml-nxos per NX, e vengono letti in sequenza grazie alla libreria os, L'ordine con cui vengono letti questi file 
 è alfabetico
 
 
 le seguenti informazioni sulle intrfacce e sui protocolli, abbiamo cercato di mantenere una corrispondenza tra le richieste netconf che facciamo al device e i comandi utlizzati 
 sul device per visualizzare le stesse informazioni, questo perchè le persone del nostro gruppo sono sicuramente più abituate a ragionare in termini di comandi cli piuttoso che modelli
-di YANG. Le seguenti informazioni verranno raccolte
+di YANG. 
+
+Le seguenti informazioni verranno raccolte per XR
 - show isis neighbors
 - show bgp vpnv4 unicast summary
 - show bgp vpnv6 unicast summary
 - show bundle bunde-eth 
+
+Le seguenti informazioni verranno raccolte per NX
+- show int description
+
 
 """
 
@@ -68,7 +74,7 @@ device = manager.connect(host=deviceip, port=830, username=switchuser, password=
 """
 
 # Disattiva questa linea di codice quando vai in produzione
-device = manager.connect(host='v-mivpe015', port=830, username='EspositoA1', password='admin', hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
+device = manager.connect(host='v-mivce501', port=830, username='EspositoA1', password='admin', hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
 
 
 
@@ -82,6 +88,10 @@ Faccio una get netconf verso il device con il filtro copyRight che mi restituisc
 filtro per una macchina NX-OS mi ritornano le info richieste mentre se mando la stessa get ad una macchina XR non ho errore ma le info riportate sono vuote.
 Con questi presupposti mi basterà verificare se nella stringa di ritorno esiste la sottostringa NX-OS, in caso affermativo sono in presenza di una macchina NX-OS, in caso contrario sono
 in presenza di qualcos'altro, probabilemte XR. Non ho verificato se questo filtro lavora anche IOS-XE.
+"""
+
+"""
+Note che il modello di yang cisco-nx-os-device contiene tutte le informazioni che ci occorrono, ospf, interface, etc per cui useremo sempre lo stesso modello di yang per tutte le get"
 """
 
 copyRight = '''
@@ -103,10 +113,6 @@ else:
 D = dict()
 
 
-
-
-
-#path = 'templatexml-nxos'
 for filename in os.listdir(path):
     if filename.endswith('.xml'):
             with open(os.path.join(path, filename), 'r') as g:
