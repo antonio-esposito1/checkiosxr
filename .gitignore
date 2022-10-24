@@ -1,3 +1,4 @@
 check.xml
-
+precheck.json
+postcheck.json
 __pycache__/
