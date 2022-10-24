@@ -21,7 +21,7 @@ def netconfrequest(subtree_filter, device):
         f.write(str_nc_get_reply)
         f.close()
     
-    #Converte xml in un dizionatio ordinato, una speciale classe di dizionario che non permette agli elementi di cambiare ordine, Questo serve perché nei file xml l'ordine è importante.
+    #Converte xml in un OrdDictionary, una speciale classe di dizionario che non permette agli elementi di cambiare ordine, Questo serve perché nei file xml l'ordine è importante.
      
     with open('check.xml') as fxml:
         return xmltodict.parse(fxml.read())

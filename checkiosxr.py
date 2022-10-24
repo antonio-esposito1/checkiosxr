@@ -42,6 +42,22 @@ from ncclient import manager
 
 from myprivatelibrary import netconfrequest
 
+class Device:
+  def __init__(self, name, username, password):
+    self.name = name
+    self.username = username
+    self.password = password
+
+  def connect(self):
+    return manager.connect(host=self.name, port=830, username=self.username, password=self.password, hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
+
+devicename = input('devicename: ')
+username = input('login: ')
+userpassword = getpass.getpass()
+
+dev = Device(devicename, username, userpassword)
+
+
 parser = ArgumentParser(description='Usage:')
 
 # Script argument for pre e post
@@ -74,9 +90,9 @@ device = manager.connect(host=deviceip, port=830, username=switchuser, password=
 """
 
 # Disattiva questa linea di codice quando vai in produzione
-device = manager.connect(host='v-mivce501', port=830, username='EspositoA1', password='admin', hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
+#device = manager.connect(host='v-mivce501', port=830, username='EspositoA1', password='admin', hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
 
-
+device = dev.connect()
 
 """
 La prima cosa che devo fare è cercare di capire con quale tipo di device stiamo lavorando, poichè non ho ancora trovato un modello di yang che mi tirasse fuori questa informazione

@@ -44,10 +44,10 @@
                                                 "neighbor-address": "10.176.2.20",
                                                 "description": "Session iMP-BGP to ASR9K VRRs Peer_Group",
                                                 "remote-as": "30722",
-                                                "connection-state": "bgp-st-estab",
+                                                "connection-state": "bgp-st-idle",
                                                 "af-data": {
                                                     "af-name": "vpnv4",
-                                                    "prefixes-accepted": "3",
+                                                    "prefixes-accepted": "0",
                                                     "prefixes-advertised": "0"
                                                 }
                                             }
@@ -80,7 +80,7 @@
                                                 "neighbor-address": "10.176.2.20",
                                                 "description": "Session iMP-BGP to ASR9K VRRs Peer_Group",
                                                 "remote-as": "30722",
-                                                "connection-state": "bgp-st-estab",
+                                                "connection-state": "bgp-st-idle",
                                                 "af-data": {
                                                     "af-name": "vpnv6",
                                                     "prefixes-accepted": "0",
@@ -207,6 +207,15 @@
                         }
                     },
                     {
+                        "name": "GigabitEthernet0/0/0/2",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP",
+                            "description": "link to mivce502"
+                        }
+                    },
+                    {
                         "name": "Null0",
                         "state": {
                             "enabled": "true",
@@ -308,8 +317,8 @@
                                         "interface": "GigabitEthernet0/0/0/0",
                                         "system-id": "00:22:3a:58:be:ff",
                                         "oper-key": "3013",
-                                        "partner-id": "00:90:bf:4b:77:23",
-                                        "partner-key": "3013",
+                                        "partner-id": "00:00:00:00:00:00",
+                                        "partner-key": "0",
                                         "activity": "ACTIVE",
                                         "synchronization": "OUT_SYNC"
                                     }

@@ -1,2293 +1,331 @@
 {
-    "interface": {
+    "showisisnei": {
         "data": {
             "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
-            "System": {
-                "@xmlns": "http://cisco.com/ns/yang/cisco-nx-os-device",
-                "intf-items": {
-                    "phys-items": {
-                        "PhysIf-list": [
-                            {
-                                "id": "eth1/31",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/29",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/28",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/26",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/32",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/24",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/22",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/21",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/18",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/17",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/16",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/51",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/49",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/47",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/60",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/45",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/59",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/52",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/19",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/36",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/2",
-                                "descr": "link to mivce502 po1000",
-                                "adminSt": "up"
-                            },
-                            {
-                                "id": "eth1/34",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/4",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/53",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/54",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/48",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/38",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/41",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/39",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/7",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/61",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/35",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/37",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/14",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/15",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/50",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/25",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/44",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/23",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/55",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/33",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/30",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/46",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/9",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/11",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/43",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/40",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/8",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/56",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/1",
-                                "descr": "link to mivpe015",
-                                "adminSt": "up"
-                            },
-                            {
-                                "id": "eth1/57",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/27",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/42",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/62",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/10",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/64",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/3",
-                                "descr": "link to mivce502 po700",
-                                "adminSt": "up"
-                            },
-                            {
-                                "id": "eth1/63",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/58",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/5",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/20",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/6",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/12",
-                                "adminSt": "down"
-                            },
-                            {
-                                "id": "eth1/13",
-                                "adminSt": "down"
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "isis": {
+                "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-clns-isis-oper",
+                "instances": {
+                    "instance": {
+                        "instance-name": "CORE",
+                        "neighbors": {
+                            "neighbor": {
+                                "system-id": "0101.7600.1040",
+                                "interface-name": "Bundle-Ether3000",
+                                "neighbor-system-id": "0101.7600.1040",
+                                "neighbor-snpa": "0004.9b6b.8f37",
+                                "local-interface": "Bundle-Ether3000",
+                                "neighbor-state": "isis-adj-up-state",
+                                "neighbor-circuit-type": "isis-levels-12",
+                                "neighbor-media-type": "isis-media-class-p2p"
                             }
-                        ]
+                        }
                     }
                 }
             }
         }
     },
-    "bgp": {
+    "showbgpvpv4unicastsummary": {
         "data": {
             "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
-            "System": {
-                "@xmlns": "http://cisco.com/ns/yang/cisco-nx-os-device"
-            }
-        }
-    },
-    "interfaceall": {
-        "data": {
-            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
-            "System": {
-                "@xmlns": "http://cisco.com/ns/yang/cisco-nx-os-device",
-                "intf-items": {
-                    "phys-items": {
-                        "PhysIf-list": [
-                            {
-                                "id": "eth1/13",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/12",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/6",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/20",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/5",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/58",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/63",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/3",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "11381663334400",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "158913789952",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "239813793939456",
-                                    "nUcastPkts": "239813793939456",
-                                    "octetRate": "184683593728",
-                                    "octets": "19072768645529600",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "386547056640"
-                                }
-                            },
-                            {
-                                "id": "eth1/64",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/10",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/62",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/42",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/27",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/57",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/1",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "21852793602048",
-                                    "nUcastPkts": "21852793602048",
-                                    "noBuffer": "0",
-                                    "octetRate": "30064771072",
-                                    "octets": "3498199322984448",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "128849018880",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "239839563743232",
-                                    "nUcastPkts": "239839563743232",
-                                    "octetRate": "180388626432",
-                                    "octets": "18992882253824000",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "386547056640"
-                                }
-                            },
-                            {
-                                "id": "eth1/56",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/8",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/40",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/59",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/45",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/47",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/60",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/17",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/16",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/26",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/51",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/34",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/4",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/52",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/49",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/29",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/37",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/14",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/28",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/19",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/2",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "239770844266496",
-                                    "nUcastPkts": "239770844266496",
-                                    "noBuffer": "0",
-                                    "octetRate": "184683593728",
-                                    "octets": "19086869023162368",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "287762808832",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "21925808046080",
-                                    "nUcastPkts": "21925808046080",
-                                    "octetRate": "55834574848",
-                                    "octets": "6013804617924608",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "257698037760"
-                                }
-                            },
-                            {
-                                "id": "eth1/36",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/35",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/61",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/31",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/32",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/24",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/22",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/44",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/25",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/18",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/21",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/9",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/11",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/53",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/54",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/48",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/38",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/41",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/46",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/30",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/39",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/7",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/15",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/50",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/55",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/23",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/33",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
-                                }
-                            },
-                            {
-                                "id": "eth1/43",
-                                "dbgIfIn-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "noBuffer": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0",
-                                    "unknownEtype": "0",
-                                    "unknownProtos": "0"
-                                },
-                                "dbgIfOut-items": {
-                                    "broadcastPkts": "0",
-                                    "discards": "0",
-                                    "errors": "0",
-                                    "multicastPkts": "0",
-                                    "nUcastPkts": "0",
-                                    "octetRate": "0",
-                                    "octets": "0",
-                                    "packetRate": "0",
-                                    "qLen": "0",
-                                    "rateInterval": "0",
-                                    "ucastPkts": "0"
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "bgp": {
+                "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-bgp-oper",
+                "instances": {
+                    "instance": {
+                        "instance-name": "default",
+                        "instance-active": {
+                            "default-vrf": {
+                                "afs": {
+                                    "af": {
+                                        "af-name": "vpnv4-unicast",
+                                        "neighbor-af-table": {
+                                            "neighbor": {
+                                                "neighbor-address": "10.176.2.20",
+                                                "description": "Session iMP-BGP to ASR9K VRRs Peer_Group",
+                                                "remote-as": "30722",
+                                                "connection-state": "bgp-st-idle",
+                                                "af-data": {
+                                                    "af-name": "vpnv4",
+                                                    "prefixes-accepted": "0",
+                                                    "prefixes-advertised": "0"
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
                             }
-                        ]
+                        }
                     }
                 }
             }
         }
     },
-    "platform": {
+    "showbgpvpv6unicastsummary": {
         "data": {
             "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
-            "System": {
-                "@xmlns": "http://cisco.com/ns/yang/cisco-nx-os-device",
-                "serial": "9T2JFFIAVSJ",
-                "showversion-items": {
-                    "copyRight": "Cisco Nexus Operating System (NX-OS) Software\nTAC support: http://www.cisco.com/tac\nDocuments: http://www.cisco.com/en/US/products/ps9372/tsd_products_support_series_home.html\nCopyright (c) 2002-2022, Cisco Systems, Inc. All rights reserved.\nThe copyrights to certain works contained herein are owned by\nother third parties and are used and distributed under license.\nSome parts of this software are covered under the GNU Public\nLicense. A copy of the license is available at\nhttp://www.gnu.org/licenses/gpl.html.\n\nNexus 9000v is a demo version of the Nexus Operating System",
-                    "nxosVersion": "10.3(1)",
-                    "nxosImageFile": "bootflash:///nxos64-cs-lite.10.3.1.F.bin"
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "bgp": {
+                "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-ipv4-bgp-oper",
+                "instances": {
+                    "instance": {
+                        "instance-name": "default",
+                        "instance-active": {
+                            "default-vrf": {
+                                "afs": {
+                                    "af": {
+                                        "af-name": "vpnv6-unicast",
+                                        "neighbor-af-table": {
+                                            "neighbor": {
+                                                "neighbor-address": "10.176.2.20",
+                                                "description": "Session iMP-BGP to ASR9K VRRs Peer_Group",
+                                                "remote-as": "30722",
+                                                "connection-state": "bgp-st-idle",
+                                                "af-data": {
+                                                    "af-name": "vpnv6",
+                                                    "prefixes-accepted": "0",
+                                                    "prefixes-advertised": "0"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "showbundlebundleethernet": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "bundles": {
+                "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-bundlemgr-oper",
+                "bundles": {
+                    "bundle": [
+                        {
+                            "bundle-interface": "Bundle-Ether3000",
+                            "data": {
+                                "minimum-active-links": "1",
+                                "active-member-count": "1",
+                                "lacp-status": "bm-feature-operational"
+                            },
+                            "members": {
+                                "member": {
+                                    "member-interface": "GigabitEthernet0/0/0/1",
+                                    "lacp-enabled": "TRUE"
+                                }
+                            }
+                        },
+                        {
+                            "bundle-interface": "Bundle-Ether3013",
+                            "data": {
+                                "minimum-active-links": "1",
+                                "active-member-count": "0",
+                                "lacp-status": "bm-feature-operational"
+                            },
+                            "members": {
+                                "member": {
+                                    "member-interface": "GigabitEthernet0/0/0/0",
+                                    "lacp-enabled": "TRUE"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "showinterfacestatus": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "interfaces": {
+                "@xmlns": "http://openconfig.net/yang/interfaces",
+                "interface": [
+                    {
+                        "name": "Loopback0",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP",
+                            "description": "mgmt-inband"
+                        }
+                    },
+                    {
+                        "name": "Loopback101",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP"
+                        }
+                    },
+                    {
+                        "name": "Bundle-Ether3000",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP",
+                            "description": "bundle to mivpe016"
+                        }
+                    },
+                    {
+                        "name": "Bundle-Ether3013",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "DOWN",
+                            "description": "bundle to mivar102"
+                        }
+                    },
+                    {
+                        "name": "MgmtEth0/RP0/CPU0/0",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP"
+                        }
+                    },
+                    {
+                        "name": "GigabitEthernet0/0/0/0",
+                        "state": {
+                            "enabled": "false",
+                            "admin-status": "DOWN",
+                            "oper-status": "DOWN",
+                            "description": "link to mivar102"
+                        }
+                    },
+                    {
+                        "name": "GigabitEthernet0/0/0/1",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP",
+                            "description": "link to mivpe016"
+                        }
+                    },
+                    {
+                        "name": "GigabitEthernet0/0/0/2",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP",
+                            "description": "link to mivce502"
+                        }
+                    },
+                    {
+                        "name": "Null0",
+                        "state": {
+                            "enabled": "true",
+                            "admin-status": "UP",
+                            "oper-status": "UP"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "showplatform": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "platform": {
+                "@xmlns": "http://cisco.com/ns/yang/Cisco-IOS-XR-plat-chas-invmgr-ng-oper",
+                "racks": {
+                    "rack": {
+                        "rack-name": "0",
+                        "slots": {
+                            "slot": [
+                                {
+                                    "slot-name": "0",
+                                    "state": {
+                                        "card-type": "R-IOSXRV9000-LC-C",
+                                        "state": "operational",
+                                        "is-shutdown": "false",
+                                        "admin-state": "Up",
+                                        "node-name": "0/0/CPU0"
+                                    }
+                                },
+                                {
+                                    "slot-name": "16",
+                                    "vm": {
+                                        "node-description": "RP",
+                                        "red-role": "ACTIVE",
+                                        "partner-name": "NONE",
+                                        "software-status": "FINAL Band",
+                                        "node-ip": "192.0.0.4",
+                                        "node-name": "0/RP0/CPU0"
+                                    },
+                                    "state": {
+                                        "card-type": "R-IOSXRV9000-RP-C",
+                                        "state": "operational",
+                                        "is-shutdown": "false",
+                                        "admin-state": "Up",
+                                        "node-name": "0/RP0/CPU0"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "showlacp": {
+        "data": {
+            "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "@xmlns:nc": "urn:ietf:params:xml:ns:netconf:base:1.0",
+            "lacp": {
+                "@xmlns": "http://openconfig.net/yang/lacp",
+                "interfaces": {
+                    "interface": [
+                        {
+                            "name": "Bundle-Ether3000",
+                            "state": {
+                                "lacp-mode": "ACTIVE",
+                                "system-priority": "32768",
+                                "system-id-mac": "00:22:3a:58:be:ff"
+                            },
+                            "members": {
+                                "member": {
+                                    "interface": "GigabitEthernet0/0/0/1",
+                                    "state": {
+                                        "interface": "GigabitEthernet0/0/0/1",
+                                        "system-id": "00:22:3a:58:be:ff",
+                                        "oper-key": "3000",
+                                        "partner-id": "00:04:9b:6b:8f:38",
+                                        "partner-key": "3000",
+                                        "activity": "ACTIVE",
+                                        "synchronization": "IN_SYNC"
+                                    }
+                                }
+                            }
+                        },
+                        {
+                            "name": "Bundle-Ether3013",
+                            "state": {
+                                "lacp-mode": "ACTIVE",
+                                "system-priority": "32768",
+                                "system-id-mac": "00:22:3a:58:be:ff"
+                            },
+                            "members": {
+                                "member": {
+                                    "interface": "GigabitEthernet0/0/0/0",
+                                    "state": {
+                                        "interface": "GigabitEthernet0/0/0/0",
+                                        "system-id": "00:22:3a:58:be:ff",
+                                        "oper-key": "3013",
+                                        "partner-id": "00:00:00:00:00:00",
+                                        "partner-key": "0",
+                                        "activity": "ACTIVE",
+                                        "synchronization": "OUT_SYNC"
+                                    }
+                                }
+                            }
+                        }
+                    ]
                 }
             }
         }
