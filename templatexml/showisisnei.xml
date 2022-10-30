@@ -6,9 +6,6 @@
                   <neighbor>
                     <system-id/>
                     <interface-name/>
-                    <neighbor-system-id/>
-                    <neighbor-snpa/>
-                    <local-interface/>
                     <neighbor-state/>
                     <neighbor-circuit-type/>
                     <neighbor-media-type/>
