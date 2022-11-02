@@ -1,8 +1,12 @@
 #Questo file contiene tutte le classi che utilizzo nel mio progetto
 
 from ncclient import manager
+from classtools import AttrDisplay
+import requests
+import json
 
-class Device:
+
+class Device(AttrDisplay):
   def __init__(self, name, username='EspositoA1', password='admin'):
     self.name = name
     self.username = username
