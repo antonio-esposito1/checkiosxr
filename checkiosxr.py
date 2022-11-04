@@ -147,23 +147,6 @@ if __name__ == '__main__':
               with open(os.path.join(path, filename), 'r') as g:
                   D[filename[:-4]] = netconfrequest(g.read(), device)
   
-  db = shelve.open('devicedb')
-  for obj in (dev,nx):
-    db[obj.name] = obj
-  db.close()
-  
-  db = shelve.open('devicedb')
-  print(len(db))
-  print(list(db.keys()))
-  
-  for key in db:
-    print(key, '=>', db[key])
-    
-  for key in sorted(db):
-    print(key, '=>', db[key])
-    
-  
-  
   #Stampo il dizionario su file .json
   
   if args.preorpost == 'pre':
