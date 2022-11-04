@@ -105,7 +105,6 @@ if __name__ == '__main__':
   
   device = dev.connectnetconf()
   
-  #print (dev.hardwareversion())
   
   """
   La prima cosa che devo fare è cercare di capire con quale tipo di device stiamo lavorando, poichè non ho ancora trovato un modello di yang che mi tirasse fuori questa informazione
@@ -147,36 +146,6 @@ if __name__ == '__main__':
       if filename.endswith('.xml'):
               with open(os.path.join(path, filename), 'r') as g:
                   D[filename[:-4]] = netconfrequest(g.read(), device)
-  
-  
-     
-  mivpe015 = IOSXR(devicename, username, userpassword)
-  mivpe015.setisisinstancename(D['showisisnei']['data']['isis']['instances']['instance']['instance-name'])
-  print(mivpe015.isisinstancename)
-  
-  iosxr = VPE(D['showisisnei']['data']['isis']['instances']['instance']['instance-name'])
-  print(iosxr.isisinstancename)
-  
-  
-  #definisco una classe test che contiene un dizionario e un metodo per visualizzre il dizionario.
-  #Questa classe prende come parametro il dizionartio D
-  class TEST():
-    def __init__(self, dict_test):
-      self.dict_test = dict_test
-    def visualizza_intero_dizionario(self,dict_test):
-      print(self.dict_test)
-    def visualizza_dizinario_isis(self,dict_test):
-      print(self.dict_test['showisisnei'])
-    def stato_del_protocollo_isis(self, dict_test):
-      dizionrio_con_lo_stato_di_isis = {}
-      dizionrio_con_lo_stato_di_isis['instance-name'] = dict_test['showisisnei']['data']['isis']['instances']['instance']['instance-name']
-      dizionrio_con_lo_stato_di_isis['neighbor'] = dict_test['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor']
-      print(dizionrio_con_lo_stato_di_isis)
-      
-  vpe_test = TEST(D)
-  #vpe_test.visualizza_intero_dizionario(D)
-  #vpe_test.visualizza_dizinario_isis(D)
-  vpe_test.stato_del_protocollo_isis(D)
   
   db = shelve.open('devicedb')
   for obj in (dev,nx):
