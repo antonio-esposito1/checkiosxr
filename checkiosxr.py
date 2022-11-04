@@ -207,26 +207,6 @@ if __name__ == '__main__':
               if l not in d2:
                 print('check ', l)
                 
-      
-      #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  Questa funzione non viene usata  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-      #devi distinguere diverse casistiche
-      #Caso 1 ho un solo neighbor isis in precheck e 0 in postcheck
-      #Caso 2 ho due neighbor isis in precheck e uno in postchek
-      #Caso 3 ho ne neighbor isis in precheck e m in post check, questo è il caso 
-      def showisisnei(d1, d2):
-        if type(Precheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor']) is dict: #sono nel caso 1
-          print('check ', l)
-        else: #sono nel caso 2 o nel caso 3
-          if type(Postcheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor']) is dict: #sono nel caso 2
-            for l in Precheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor']:
-              if l != Postcheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor']:
-                print('check ', l)
-          else: #sono nel caso 3
-            for l in Precheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor']:
-              if l not in Postcheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor']:
-                print('check ', l)
-            
-        
       """  
       def confrontadizionari(d1,d2):
         ListaDelleChiavi = list(d1.keys())
