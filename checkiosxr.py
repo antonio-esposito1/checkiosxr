@@ -64,21 +64,7 @@ if __name__ == '__main__':
     
     #Nel caso voglio usare la username e la pwd di defailt
   dev = Device(devicename)
-  print(dev)
-  """
-  print(dev.__class__)
-  print(dev.__class__.__name__)
-  print(dev.__class__.__base__)
-  print(dev.__dict__)
-  """
-  nx = NXOS(switchname, username, userpassword)
-  print(nx)
-  """
-  print(nx.__class__)
-  print(nx.__class__.__name__)
-  print(nx.__class__.__base__)
-  print(nx.__dict__)
-  """
+  
   #Questa non funziona ancora ho problemi con il proxy che mi blocca la richiesta https inoltre non sono sicurissimo sulla procedura di generazione dei certificati SSL
   #showipinterfacebrief = nx.connectnxapi('show interface mgmt 0')['result']['body']
   
