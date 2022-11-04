@@ -194,7 +194,7 @@ if __name__ == '__main__':
   
   device = dev.connectnetconf()
   
-  
+  #print (dev.hardwareversion())
   
   """
   La prima cosa che devo fare è cercare di capire con quale tipo di device stiamo lavorando, poichè non ho ancora trovato un modello di yang che mi tirasse fuori questa informazione
@@ -226,6 +226,25 @@ if __name__ == '__main__':
   else:
     path = 'templatexml'
      
+  
+  
+  #namespace = {"plat-chas-invmgr-ng-oper": "http://cisco.com/ns/yang/Cisco-IOS-XR-plat-chas-invmgr-ng-oper"}
+  #namespace = 'http://cisco.com/ns/yang/Cisco-IOS-XR-plat-chas-invmgr-ng-oper'
+  namespace = 'http://cisco.com/ns/yang/Cisco-IOS-XR-platform-oper'
+  #select = '/Cisco-IOS-XR-platform-oper:platform/racks/rack/slots/slot/state/card-type'
+  select = '/Cisco-IOS-XR-platform-oper:platform/racks/rack['rack-name']'
+  #select = '/platform-oper:platform/platform-oper:racks/platform-oper:rack/platform-oper:slots/platform-oper:slot/platform-oper:state/platform-oper:card-type'
+  #select = '/plat-chas-invmgr-ng-oper:platform/plat-chas-invmgr-ng-oper:racks/plat-chas-invmgr-ng-oper:rack/plat-chas-invmgr-ng-oper:slots/plat-chas-invmgr-ng-oper:slot[0]/plat-chas-invmgr-ng-oper:state/plat-chas-invmgr-ng-oper:card-type'
+  #select = "/plat-chas-invmgr-ng-oper:platform/plat-chas-invmgr-ng-oper:racks/plat-chas-invmgr-ng-oper:rack/plat-chas-invmgr-ng-oper:slots/plat-chas-invmgr-ng-oper:slot"
+  #select = "/plat-chas-invmgr-ng-oper:platform"
+  #select = "/platform"
+  
+  reply = device.get(filter=("xpath", (namespace, select)))
+  #reply = device.get('xpath', '/Cisco-IOS-XR-plat-chas-invmgr-ng-oper:platform/racks/rack/slots/slot1/state/card-type')#.data_xml
+  #reply = device.get('xpath', 'plat-chas-invmgr-ng-oper:platform/plat-chas-invmgr-ng-oper:racks/plat-chas-invmgr-ng-oper:rack/plat-chas-invmgr-ng-oper:slots/plat-chas-invmgr-ng-oper:slot/plat-chas-invmgr-ng-oper:state/plat-chas-invmgr-ng-oper:card-type').data_xml
+  #reply = device.get('xpath', 'plat-chas-invmgr-ng-oper:platform/plat-chas-invmgr-ng-oper:racks/plat-chas-invmgr-ng-oper:rack/plat-chas-invmgr-ng-oper:slots/plat-chas-invmgr-ng-oper:slot')#.data_xml
+  
+  
   #definisco un dizionario che, alla fine,  conterrà tutte le info relativa alla piattaforma.
   
   D = dict()
@@ -238,7 +257,7 @@ if __name__ == '__main__':
                   D[filename[:-4]] = netconfrequest(g.read(), device)
   
   
-      
+     
   mivpe015 = IOSXR(devicename, username, userpassword)
   mivpe015.setisisinstancename(D['showisisnei']['data']['isis']['instances']['instance']['instance-name'])
   print(mivpe015.isisinstancename)
