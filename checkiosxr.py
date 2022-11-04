@@ -207,41 +207,6 @@ if __name__ == '__main__':
               if l not in d2:
                 print('check ', l)
                 
-      """  
-      def confrontadizionari(d1,d2):
-        ListaDelleChiavi = list(d1.keys())
-        for i in ListaDelleChiavi:
-          if type(d1[i]) is dict:
-            confrontadizionari(d1[i],d2[i])
-          else:
-            if (type(d1[i]) is str) and (type(d2[i]) is str):
-              pass
-            elif (type(d1[i]) is list) and (type(d2[i] is str)):
-              pass
-            else:
-              if (type(d1[i]) is list) and (type(d2[i] is list)):
-                print('sono due list')
-                for l in d1[i]:
-                  if l not in d2[i]:
-                    print('check', l)
-      """
-                    
-      """
-      def visitadizionari(dizionario1, dizionario2):
-        ListaDelleChiavi = list(dizionario1.keys())
-        for d in ListaDelleChiavi:
-          if type(dizionario1[d]) is dict:
-            visitadizionari(dizionario1[d],dizionario2[d])
-          elif type(dizionario1[d]) is str:
-            print(dizionario1[d])
-          else:
-            print('non ci sono')
-            for l in dizionario1[d]:
-              if l not in dizionario2[d]:
-                print('check', l)
-      """
-      
-  
       if Precheck == Postcheck:
         print('i due file json sono identici')
       else:
