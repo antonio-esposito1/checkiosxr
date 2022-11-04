@@ -14,26 +14,6 @@ class Device(AttrDisplay):
 
   def connectnetconf(self):
     return manager.connect(host=self.name, port=830, username=self.username, password=self.password, hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
-  
-  """
-  def hardwareversion(self):
-    m = manager.connect(host=self.name, port=830, username=self.username, password=self.password, hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
-    filtro = '''
-                <platform xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-plat-chas-invmgr-ng-oper">
-                <racks>
-                  <rack>
-                  </rack>
-                </racks>
-                </platform>
-                <platform-inventory xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-plat-chas-invmgr-ng-oper">
-                  <racks>
-                    <rack/>
-                  </racks>
-                </platform-inventory>
-              '''
-    return(m.get(('subtree', filtro)).data_xml)
-"""
-              
 
 class IOSXR(Device):
   def setisisinstancename(self, isisinstancename):
