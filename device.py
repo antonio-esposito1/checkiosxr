@@ -7,7 +7,7 @@ import json
 
 
 class Device(AttrDisplay):
-  def __init__(self, name, username='EspositoA1', password='admin'):
+  def __init__(self, name, username, password):
     self.name = name
     self.username = username
     self.password = password

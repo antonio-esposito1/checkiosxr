@@ -31,6 +31,12 @@ Le seguenti informazioni verranno raccolte per NX
 
 """
 
+
+
+
+
+
+
 import xmltodict
 import json
 import os
@@ -48,61 +54,22 @@ import shelve
 
 if __name__ == '__main__':
   
-  devicename = 'v-mivpe015'
-  username = 'EspositoA1'
-  userpassword = 'admin'
-
-  switchname = 'v-mivce501'
-    
-    
-    #devicename = input('devicename: ')
-    #username = input('login: ')
-    #userpassword = getpass.getpass()
-    
-    #Nel caso voglio specificarfe la username e la pwd 
-    #dev = Device(devicename, username, userpassword)
-    
-    #Nel caso voglio usare la username e la pwd di defailt
-  dev = Device(devicename)
-  
-  #Questa non funziona ancora ho problemi con il proxy che mi blocca la richiesta https inoltre non sono sicurissimo sulla procedura di generazione dei certificati SSL
-  #showipinterfacebrief = nx.connectnxapi('show interface mgmt 0')['result']['body']
-  
-  
-  parser = ArgumentParser(description='Usage:')
-  
-  # Script argument for pre e post
-  
-  parser.add_argument('-t', '--preorpost', type=str, required=True)
-  
+  #python3.6 checkiosxr.py --device v-mivpe015 --login EspositoA1 --password admin --type pre
+  parser = ArgumentParser()
+  parser.add_argument("--device", required = "True")
+  parser.add_argument("--login", required = "True")
+  parser.add_argument("--password", required = "True")
+  parser.add_argument("--type", choices=["pre","post"], required = "True")
   args = parser.parse_args()
   
-  """
-  # script arguments for manager
-      parser.add_argument('-a', '--host', type=str, required=True,
-                        help="Device IP address or Hostname")
-      parser.add_argument('-u', '--username', type=str, required=True,
-                        help="Device Username (netconf agent username)")
-      parser.add_argument('-p', '--password', type=str, required=True,
-                        help="Device Password (netconf agent password)")
-      parser.add_argument('--port', type=int, default=830,
-                        help="Netconf agent port")
-      args = parser.parse_args()
-  """
+  deviceip = args.device
+  switchuser = args.login
+  switchpassword = args.password
+   
+  #definisco un istanza della classe Device 
+  dev = Device(deviceip,switchuser,switchpassword)
   
-  
-  # Attiva questo pezzo di codice quando vai in produzione
-  """
-  deviceip = input('deviceip: ')
-  switchuser = input('login: ')
-  switchpassword = getpass.getpass()
-  
-  device = manager.connect(host=deviceip, port=830, username=switchuser, password=switchpassword, hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
-  """
-  
-  # Disattiva questa linea di codice quando vai in produzione
-  #device = manager.connect(host='v-mivce501', port=830, username='EspositoA1', password='admin', hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
-  
+  # device è il metodo che si connette alla macchina in campo  
   device = dev.connectnetconf()
   
   
@@ -149,34 +116,29 @@ if __name__ == '__main__':
   
   #Stampo il dizionario su file .json
   
-  if args.preorpost == 'pre':
-      json.dump(D, fp = open('precheck.json', 'w'), indent = 4)
-  elif args.preorpost == 'post':
-      json.dump(D, fp = open('postcheck.json', 'w'), indent = 4)
+  #==============================salviamo D su file json ===================================================================== 
+
+  filename = 'precheck.json' if args.type == 'pre' else 'postcheck.json'
+  json.dump(D, fp = open(filename, 'w'), indent = 4)
+
+#========================================VERIFICHE=========================================================================
+
   
+  if args.type == 'post':
       Precheck = json.load(open('precheck.json'))
       Postcheck = json.load(open('postcheck.json'))
       
-      #print(os.system('diff precheck.json postcheck.json'))
-  
+      """
       ListaKeysPrecheck = list(Postcheck.keys())
       ListaKeysPostcheck = list(Postcheck.keys())
   
-      #print(type(ListaKeysPrecheck))
-      #print(ListaKeysPrecheck)
-  
-      #print(type(ListaKeysPostcheck))
-      #print(ListaKeysPostcheck)
-  
-      #print(Postcheck.keys())
-      #print(Postcheck.keys())
-      
       def scendidentroildizionario(dizion):
         ListaDelleChiavi = list(dizion.keys())
         for i in ListaDelleChiavi:
           if type(dizion[i]) is dict:
             scendidentroildizionario(dizion[i])
         return i
+      """
         
       #Confronta due dizionari e ritorna una lista con l'elenco delle chiavi degli elementi che differiscono
       def listadellechiaviko(d1,d2):
@@ -188,7 +150,7 @@ if __name__ == '__main__':
           else:
             ListaDelleChiaviKO.append(i)
         return ListaDelleChiaviKO
-          
+      
       #devi distinguere 4 diverse casistiche
       #Caso 1 ho un solo elemento nel precheck e 0 in postcheck ad esempio nel caso isis ho un sole neighbor nel Pre e zero nel Pro
       #Caso 2 ho due elementi nel precheck e uno nel postchek ad esempio nel caso isis ho due neighbor nel Pre e uno nel Pro
@@ -218,13 +180,13 @@ if __name__ == '__main__':
         print('ISIS OK')
       else:
         print('ISIS KO')
+        #attenzione se non ci sono neighbor isis il programma va in errore per cui stiamo valutando di eliminare questo check
         Confronta_Dizionari(Precheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor'],Postcheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor'])
         
       if Precheck['showinterfacestatus'] == Postcheck['showinterfacestatus']:
         print('INTERFACE OK')
       else:
         print('INTERFACE KO')
-        #attenzione se non ci sono neighbor isis il programma va in errore per cui stiamo valutando di eliminare questo check
         Confronta_Dizionari(Precheck['showinterfacestatus']['data']['interfaces']['interface'], Postcheck['showinterfacestatus']['data']['interfaces']['interface'])
       
       if Precheck['showbgpvpv4unicastsummary'] == Postcheck['showbgpvpv4unicastsummary']:
@@ -256,7 +218,4 @@ if __name__ == '__main__':
       else:
         print('LACP KO')
         Confronta_Dizionari(Precheck['showlacp']['data']['lacp']['interfaces']['interface'], Postcheck['showlacp']['data']['lacp']['interfaces']['interface'])
-      
-  else:
-      print('Devi scegliere pre o post')
   
