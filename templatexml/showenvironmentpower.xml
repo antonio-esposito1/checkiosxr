@@ -1,0 +1,3 @@
+ <power-management xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-envmon-oper">
+        <rack/>
+      </power-management>

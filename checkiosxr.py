@@ -117,6 +117,8 @@ if __name__ == '__main__':
   #Stampo il dizionario su file .json
   
   #==============================salviamo D su file json ===================================================================== 
+  #ATTENZIONE quando trasferiamo queso file su powerci dovremo mettere i percorsi completi per i file ad esempio:
+  #/application/powercli/scripts/checkXRCfg/precheck.json
 
   filename = 'precheck.json' if args.type == 'pre' else 'postcheck.json'
   json.dump(D, fp = open(filename, 'w'), indent = 4)
@@ -158,7 +160,7 @@ if __name__ == '__main__':
       #Caso 4 ho N elementi nel pre e 0 nel post ad esempio nel casi di isis avevo N neigbor ma sono caduti tutti non viene gestito per il momento  
       def Confronta_Dizionari(d1,d2):
         if type(d1) is dict: #sono nel caso 1
-          print('check ', l)
+          print('check', d1, "\n", d2)
         else: #sono nel caso 2 o nel caso 3
           if type(d2) is dict: #sono nel caso 2
             for l in d1:
@@ -181,7 +183,7 @@ if __name__ == '__main__':
       else:
         print('ISIS KO')
         #attenzione se non ci sono neighbor isis il programma va in errore per cui stiamo valutando di eliminare questo check
-        Confronta_Dizionari(Precheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor'],Postcheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor'])
+        #Confronta_Dizionari(Precheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor'],Postcheck['showisisnei']['data']['isis']['instances']['instance']['neighbors']['neighbor'])
         
       if Precheck['showinterfacestatus'] == Postcheck['showinterfacestatus']:
         print('INTERFACE OK')
@@ -192,14 +194,21 @@ if __name__ == '__main__':
       if Precheck['showbgpvpv4unicastsummary'] == Postcheck['showbgpvpv4unicastsummary']:
         print('BGP VPNV4 OK')
       else:
-        print('BGP VPNV4 KO')
+        print('BGP VPNV4 KO, Controlla anche il numero di prefissi avvertiti e ricevuti')
         Confronta_Dizionari(Precheck['showbgpvpv4unicastsummary']['data']['bgp']['instances']['instance']['instance-active']['default-vrf']['afs']['af']['neighbor-af-table']['neighbor'],Postcheck['showbgpvpv4unicastsummary']['data']['bgp']['instances']['instance']['instance-active']['default-vrf']['afs']['af']['neighbor-af-table']['neighbor'])
       
       if Precheck['showbgpvpv6unicastsummary'] == Postcheck['showbgpvpv6unicastsummary']:
         print('BGP VPNV6 OK')
       else:
-        print('BGP VPNV6 KO')
+        print('BGP VPNV6 KO Controlla anche il numero di prefissi avvertiti e ricevuti')
         Confronta_Dizionari(Precheck['showbgpvpv6unicastsummary']['data']['bgp']['instances']['instance']['instance-active']['default-vrf']['afs']['af']['neighbor-af-table']['neighbor'],Postcheck['showbgpvpv6unicastsummary']['data']['bgp']['instances']['instance']['instance-active']['default-vrf']['afs']['af']['neighbor-af-table']['neighbor'])
+      
+      if Precheck['showbgpvrfallsummary'] == Postcheck['showbgpvrfallsummary']:
+        print('BGP VRF ALL OK')
+      else:
+        print('BGP VRF ALL KO Controlla anche il numero di prefissi avvertiti e ricevuti')
+        Confronta_Dizionari(Precheck['showbgpvrfallsummary']['data']['bgp']['instances']['instance']['instance-active']['vrfs']['vrf'],Postcheck['showbgpvrfallsummary']['data']['bgp']['instances']['instance']['instance-active']['vrfs']['vrf'])
+      
       
       if Precheck['showbundlebundleethernet'] == Postcheck['showbundlebundleethernet']:
         print('Bundle OK')
