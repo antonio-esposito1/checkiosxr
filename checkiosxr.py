@@ -12,18 +12,22 @@ netconfrequest che prende in ingresso due parametri:
  - device a cui applicare la richiesta. Nota che device è un oggetto che viene creato con ncclient
 
 Nota che i filtri xml da applicare alla richiesta sono salvati nella cartella templatexml per XR e templatexml-nxos per NX, e vengono letti in sequenza grazie alla libreria os, L'ordine con cui vengono letti questi file 
-è alfabetico
+dovrebbe essere alfabetico anche se non ne sono sicure perchè sto notando che i nuovi flilti vengono aggiunti sempre alla fine dele file quindo potrebbe essere anche un ordine temporale.
 
 
 le seguenti informazioni sulle intrfacce e sui protocolli, abbiamo cercato di mantenere una corrispondenza tra le richieste netconf che facciamo al device e i comandi utlizzati 
 sul device per visualizzare le stesse informazioni, questo perchè le persone del nostro gruppo sono sicuramente più abituate a ragionare in termini di comandi cli piuttoso che modelli
 di YANG. 
 
-Le seguenti informazioni verranno raccolte per XR
+Le seguenti informazioni verranno raccolte per XR (nota che le risposte non contengono esattamente quello che verrebbe riportato digitando il comando sul device, ma una 
+selezione delle stasse informazioni prese dai rispettivi modelli di yang.)
 - show isis neighbors
 - show bgp vpnv4 unicast summary
 - show bgp vpnv6 unicast summary
+- show interface bired
 - show bundle bunde-eth 
+- show laco
+- show platform
 
 Le seguenti informazioni verranno raccolte per NX
 - show int description
