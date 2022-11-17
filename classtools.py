@@ -1,13 +1,7 @@
 "Assorted class utilities and tools"
 
 class AttrDisplay:
-    """
-    Provides an inheritable display overload method that shows
-    instances with their class names and a name=value pair for
-    each attribute stored on the instances itself (but not attrs
-    inherited from its classes). Can be mixed into any class, 
-    and will work on any instance.
-    """
+    "Provides an inheritable display overload method that shows instances with their class names and a name=value pair for each attribute stored on the instances itself (but not attrs inherited from its classes). Can be mixed into any class, and will work on any instance."
     
     def gatherAttrs(self):
         attrs = []

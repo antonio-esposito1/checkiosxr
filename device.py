@@ -1,4 +1,4 @@
-#Questo file contiene tutte le classi che utilizzo nel mio progetto
+"Questo file contiene tutte le classi che utilizzo nel mio progetto"
 
 from ncclient import manager
 from classtools import AttrDisplay
@@ -7,12 +7,14 @@ import json
 
 
 class Device(AttrDisplay):
+  "Questa classe descrive un device"
   def __init__(self, name, username, password):
     self.name = name
     self.username = username
     self.password = password
 
   def connectnetconf(self):
+    "questo metodo restituisce il collegamento netconf al device in campo "
     return manager.connect(host=self.name, port=830, username=self.username, password=self.password, hostkey_verify=False, device_params={}, allow_agent=False, look_for_keys=False)
 
 class IOSXR(Device):

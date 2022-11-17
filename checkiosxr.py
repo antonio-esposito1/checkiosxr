@@ -28,6 +28,7 @@ selezione delle stasse informazioni prese dai rispettivi modelli di yang.)
 - show bundle bunde-eth 
 - show laco
 - show platform
+- show power environment
 
 Le seguenti informazioni verranno raccolte per NX
 - show int description
@@ -47,10 +48,6 @@ import os
 from argparse import ArgumentParser
 import getpass
 import lxml.etree as et
-#import requests
-
-#from ncclient import manager
-
 from myprivatelibrary import netconfrequest
 from device import Device, IOSXR, VPE, NXOS
 
@@ -58,7 +55,7 @@ import shelve
 
 if __name__ == '__main__':
   
-  #python3.6 checkiosxr.py --device v-mivpe015 --login EspositoA1 --password admin --type pre
+  #python3.6 checkiosxr.py --device v-mivpe016 --login EspositoA1 --password admin --type pre
   parser = ArgumentParser()
   parser.add_argument("--device", required = "True")
   parser.add_argument("--login", required = "True")
@@ -70,7 +67,7 @@ if __name__ == '__main__':
   switchuser = args.login
   switchpassword = args.password
    
-  #definisco un istanza della classe Device 
+  #definisco un istanza della classe Device che è a sua volta definita nel file Device.py
   dev = Device(deviceip,switchuser,switchpassword)
   
   # device è il metodo che si connette alla macchina in campo  
@@ -231,4 +228,9 @@ if __name__ == '__main__':
       else:
         print('LACP KO')
         Confronta_Dizionari(Precheck['showlacp']['data']['lacp']['interfaces']['interface'], Postcheck['showlacp']['data']['lacp']['interfaces']['interface'])
-  
+        
+      if Precheck['showenvironmentpower'] == Postcheck['showenvironmentpower']:
+        print('POWER OK')
+      else:
+        print('POWER KO')
+        Confronta_Dizionari(Precheck['showlacp']['data']['lacp']['interfaces']['interface'], Postcheck['showlacp']['data']['lacp']['interfaces']['interface'])

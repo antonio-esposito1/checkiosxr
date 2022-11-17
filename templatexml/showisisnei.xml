@@ -11,6 +11,11 @@
                     <neighbor-media-type/>
                   </neighbor>
                 </neighbors>
+                <checkpoint-adjacencies>
+              <checkpoint-adjacency>
+                <system-id/>
+              </checkpoint-adjacency>
+            </checkpoint-adjacencies>
               </instance>
             </instances>
           </isis>
