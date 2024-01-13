@@ -1,0 +1,5 @@
+<platform xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-platform-oper">
+        <racks>
+          <rack/>
+        </racks>
+      </platform>
