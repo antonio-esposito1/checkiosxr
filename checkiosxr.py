@@ -38,6 +38,8 @@ from argparse import ArgumentParser
 import getpass
 import lxml.etree as et
 #import requests
+#import deepdiff
+from confronto_corpo import procedi
 
 #from ncclient import manager
 
@@ -349,7 +351,7 @@ if __name__ == '__main__':
       #devi distinguere 4 diverse casistiche
       #Caso 1 ho un solo elemento nel precheck e 0 in postcheck ad esempio nel caso isis ho un sole neighbor nel Pre e zero nel Pro
       #Caso 2 ho due elementi nel precheck e uno nel postchek ad esempio nel caso isis ho due neighbor nel Pre e uno nel Pro
-      #Caso 3 ho N elementi in precheck e M in post check  ad esempio nel caso di sisi avevo N neighbor nel Pre e M nel Post
+      #Caso 3 ho N elementi in precheck e M in post check  ad esempio nel caso di isis avevo N neighbor nel Pre e M nel Post
       #Caso 4 ho N elementi nel pre e 0 nel post ad esempio nel casi di isis avevo N neigbor ma sono caduti tutti non viene gestito per il momento  
       def Confronta_Dizionari(d1,d2):
         if type(d1) is dict: #sono nel caso 1
@@ -468,7 +470,15 @@ if __name__ == '__main__':
       else:
         print('LACP KO')
         Confronta_Dizionari(Precheck['showlacp']['data']['lacp']['interfaces']['interface'], Postcheck['showlacp']['data']['lacp']['interfaces']['interface'])
-      
+        
+      if Precheck['showinterface'] == Postcheck['showinterface']:
+        print('DATA RATE OK')
+      else:
+        print('DATA RATE KO')
+        Confronta_Dizionari(Precheck['showinterface']['data']['infra-statistics']['interfaces']['interface'], Postcheck['showinterface']['data']['infra-statistics']['interfaces']['interface'])
+      procedi()
   else:
       print('Devi scegliere pre o post')
+  
+  
   
