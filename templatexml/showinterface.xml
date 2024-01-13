@@ -1,0 +1,13 @@
+<infra-statistics xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-infra-statsd-oper">
+    <interfaces>
+      <interface>
+        <interface-name/>
+        <latest>
+          <data-rate>
+            <input-data-rate/>
+            <output-data-rate/>
+          </data-rate>
+        </latest>
+      </interface>
+    </interfaces>
+  </infra-statistics>
