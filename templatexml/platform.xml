@@ -1,0 +1,5 @@
+<platform xmlns="http://cisco.com/ns/yang/Cisco-IOS-XR-plat-chas-invmgr-ng-oper">
+        <racks>
+          <rack/>
+        </racks>
+      </platform>

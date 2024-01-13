@@ -1,0 +1,86 @@
+
+----
+Elementi rimossi, non presenti nel file POST:
+---------------------------------------------
+
+- ISIS -
+- Nessun elemento -
+
+
+
+- BGP4 -
+- Nessun elemento -
+
+
+
+- BGP6 -
+- Nessun elemento -
+
+
+
+- Bundle-Ethernet -
+- Nessun elemento -
+
+
+
+- Interfaces -
+- Nessun elemento -
+
+
+
+- Platform -
+- Nessun elemento -
+
+
+
+- Lacp -
+- Nessun elemento -
+
+
+
+- BGP VRFs -
+- Nessun elemento -
+
+
+----
+Elementi con differenze tra file PRE e file POST:
+-------------------------------------------------
+
+- ISIS -
+- Nessun elemento -
+
+
+
+- BGP4 -
+- Nessun elemento -
+
+
+
+- BGP6 -
+- Nessun elemento -
+
+
+
+- Bundle-Ethernet -
+- Nessun elemento -
+
+
+
+- Interfaces -
+- Nessun elemento -
+
+
+
+- Platform -
+- Nessun elemento -
+
+
+
+- Lacp -
+- Nessun elemento -
+
+
+
+- BGP VRFs -
+- Nessun elemento -
+
